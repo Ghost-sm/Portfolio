@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei";
 
 export function Computer(props) {
   const { nodes, materials } = useGLTF(
-    "./models/computer-optimized-transformed.glb"
+    import.meta.env.BASE_URL + "/models/computer-optimized-transformed.glb"
   );
 
   return (
@@ -10,7 +10,7 @@ export function Computer(props) {
       <group position={[-4.005, 67.549, 58.539]}>
         <mesh
           castShadow
-          receiveShadow
+          receiveShadow         
           geometry={nodes.Cube000_ComputerDesk_0001_1.geometry}
           material={materials["ComputerDesk.001"]}
         />
@@ -25,6 +25,6 @@ export function Computer(props) {
   );
 }
 
-useGLTF.preload("./models/computer-optimized-transformed.glb");
+useGLTF.preload(import.meta.env.BASE_URL + "/models/computer-optimized-transformed.glb");
 
 export default Computer;
