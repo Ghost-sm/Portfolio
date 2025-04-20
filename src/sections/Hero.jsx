@@ -56,11 +56,18 @@ const Hero = () => {
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
               Hi, I'm Santiago, a developer based in Spain with a passion for code.
             </p>
-            <Button 
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my Work"
-            />
+            <div className="flex gap-4">
+              <Button 
+                className="md:w-65 md:h-10 w-40 h-8"
+                id="button"
+                text="See my Work"
+              />
+              <Button
+                className="md:w-65 md:h-10 w-40 h-8" 
+                href="./CV.pdf" 
+                text="CV"
+              />
+            </div>
           </div>
         </header>
         
